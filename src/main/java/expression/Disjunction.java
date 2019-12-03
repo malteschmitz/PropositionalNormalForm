@@ -9,6 +9,7 @@ public class Disjunction extends Expression {
         this.rightHandSide = rightHandSide;
     }
 
+    // generated method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

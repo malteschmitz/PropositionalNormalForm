@@ -3,6 +3,7 @@ package expression;
 public class Variable extends Expression {
     public final String name;
 
+    // generated method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

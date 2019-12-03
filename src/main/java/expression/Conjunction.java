@@ -4,6 +4,7 @@ public class Conjunction extends Expression {
     public final Expression leftHandSide;
     public final Expression rightHandSide;
 
+    // generated method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -21,14 +21,24 @@ javac -d target/classes src/main/java/*.java src/main/java/**/*.java
 
 ## Running
 
-You can run ... with
+You can run the application and pass expressions of propositional logic as command line arguments. For example
 
 ```
-java -cp target/classes Main mult.whl
+java -cp target/classes Main (a||b) -> (c && !(d&&e))
 ```
 
-The expected output is
+will produce
 
 ```
-...
+Input:
+a || b -> c && !(d && e)
+
+Desugared:
+!(a || b) || c && !(d && e)
+
+Negation Normal Form:
+!a && !b || c && (!d || !e)
+
+Disjunctive Normal Form:
+!a && !b || c && !d || c && !e
 ```

@@ -7,6 +7,7 @@ public class Constant extends Expression {
         this.value = value;
     }
 
+    // generated method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -3,6 +3,7 @@ package expression;
 public class Negation extends Expression {
     public final Expression operand;
 
+    // generated method
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

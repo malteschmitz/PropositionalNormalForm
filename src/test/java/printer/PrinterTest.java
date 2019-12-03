@@ -28,7 +28,9 @@ public class PrinterTest {
     );
 
     private final String implicationsCode = "a -> (b -> c)";
-    private final Expression implications = new Implication(new Variable("a"), new Implication(new Variable("b"), new Variable("c")));
+    private final Expression implications = new Implication(
+            new Variable("a"),
+            new Implication(new Variable("b"), new Variable("c")));
 
     @Test
     public void testPrint() {

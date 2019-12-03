@@ -1,9 +1,9 @@
 package parser;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
 import expression.*;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ParserTest {
     private final String expressionCode = "a -> (b <-> a || b && !a) && true || false";
@@ -28,10 +28,14 @@ public class ParserTest {
     );
 
     private final String implicationsCode = "a -> b -> c";
-    private final Expression implications = new Implication(new Variable("a"), new Implication(new Variable("b"), new Variable("c")));
+    private final Expression implications = new Implication(
+            new Variable("a"),
+            new Implication(new Variable("b"), new Variable("c")));
 
     private final String implicationsLeftCode = "(a -> b) -> c";
-    private final Expression implicationsLeft = new Implication(new Implication(new Variable("a"), new Variable("b")), new Variable("c"));
+    private final Expression implicationsLeft = new Implication(
+            new Implication(new Variable("a"), new Variable("b")),
+            new Variable("c"));
 
     @Test
     public void testParse() {
